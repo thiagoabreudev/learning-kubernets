@@ -10,4 +10,10 @@ spec:
       image: aluracursos/portal-noticias:1
       ports:
         - containerPort: 80
+      env:
+        - name: IP_SISTEMA
+          valueFrom:
+            configMapKeyRef:
+              name: portal-noticias-configmap
+              key: IP_SISTEMA
     
